@@ -68,5 +68,5 @@ Unfortunately, this code will not work without modification to the default PSD `
     https://github.com/adamcw/psd.rb
 
 This fork adds support for determining line spacing, as well as allowing wider
-PDF support, fixing an error I encountered with a file during development.
+PSD support, fixing an error I encountered with a file during development.
 
