@@ -77,12 +77,16 @@ class PSDTextStyle:
 
     def extract_style(self, text):
         font = text['font']
-        name, typ = font['name'], "Regular"
-        bits = name.split("-")
-        if len(bits) == 2:
-            name, typ = bits
 
-        self._styles.append(("font-family", name))
+        for fname in font['fonts']:
+            if fname == "AdobeInvisFont":
+                break
+
+            name, typ = fname, "Regular"
+            bits = name.split("-")
+            if len(bits) == 2:
+                name, typ = bits
+            self._styles.append(("font-family", name))
 
         if typ in FONT_TYPE_MAP:
             self._styles += FONT_TYPE_MAP[typ]

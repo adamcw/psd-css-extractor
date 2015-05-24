@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:adamcw/psd.rb.git
-  revision: 6a4ece41841bfa2dd22c528407e598ce93ccf5f8
+  revision: 1fa6ec1398607dc10a40353548cdf98be05c068c
   specs:
     psd (3.3.2)
       chunky_png
