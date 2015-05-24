@@ -22,6 +22,23 @@ This code requires both `python` and `ruby` to operate.
     gem install bundler
     bundle install
 
+# Install Python Dependencies
+
+## Install Locally (recommended)
+
+    virtualenv venv
+    source ./venv/bin/activate
+    pip install -r requirements.txt
+
+You can then either type `source ./venv/bin/activate` to activate the virtual
+environment to the code each time, or you can invoke the code as:
+
+    ./venv/bin/python ./extract.py FILENAME
+
+## Install Globally
+
+    pip install -r requirements.txt
+
 ## About
 
 This code makes use of the very good PSD gem available to `ruby` to parse the

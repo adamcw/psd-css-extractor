@@ -1,9 +1,16 @@
 #!/usr/bin/env python
+"""Usage: ./extract.py FILENAME
+
+Arguments:
+    FILENAME    The PSD to be processed.
+"""
+
 from __future__ import (absolute_import, print_function, division,
         unicode_literals)
 import os
 import sys
 import json
+import docopt
 import subprocess
 from collections import defaultdict
 
@@ -109,7 +116,9 @@ class PSDTextStyle:
         return self._styles == other._styles
 
 if __name__ == "__main__":
-    psd = PSD(sys.argv[1])
+    args = docopt.docopt(__doc__)
+
+    psd = PSD(args["FILENAME"])
     texts = psd.get_texts()
     print(len(texts))
 
